@@ -60,8 +60,8 @@ Dataset used for this analysis:
 
 ## 📫 Contact
 
-* **LinkedIn:** [Shubhrat Chaursiya](https://www.linkedin.com/in/shubhratchaursiya)
-* **Email:** [shubhratchaursiya@gmail.com](mailto:shubhratchaursiya2005@gmail.com)
+* **LinkedIn:** [Shubhrat Chaursiya](https://www.linkedin.com/in/shubhrat-chaursiya-819672354/)
+* **Email:** [shubhratchaursiya2005@gmail.com](mailto:shubhratchaursiya2005@gmail.com)
 
 ---
 
