@@ -1,0 +1,61 @@
+# 🚗 Electric Vehicle Charging Stations 2024 - Dataset Generator
+# Author: Shubhrat Chaursiya
+# ---------------------------------------------
+# This script automatically creates a sample EV Charging Stations dataset
+# with realistic data for analysis and ML projects.
+# Output: electric_vehicle_charging_stations_2024.csv
+# ---------------------------------------------
+
+import pandas as pd
+import numpy as np
+import random
+
+# ---------------- 1. Define Data Components ----------------
+cities = {
+    'Delhi': {'state': 'Delhi', 'lat_range': (28.4, 28.9), 'lon_range': (76.9, 77.4)},
+    'Mumbai': {'state': 'Maharashtra', 'lat_range': (18.8, 19.3), 'lon_range': (72.7, 73.0)},
+    'Bangalore': {'state': 'Karnataka', 'lat_range': (12.8, 13.1), 'lon_range': (77.4, 77.8)},
+    'Chennai': {'state': 'Tamil Nadu', 'lat_range': (12.9, 13.2), 'lon_range': (80.1, 80.4)},
+    'Hyderabad': {'state': 'Telangana', 'lat_range': (17.2, 17.6), 'lon_range': (78.3, 78.6)},
+    'Pune': {'state': 'Maharashtra', 'lat_range': (18.4, 18.7), 'lon_range': (73.7, 73.9)},
+    'Kolkata': {'state': 'West Bengal', 'lat_range': (22.4, 22.7), 'lon_range': (88.3, 88.5)},
+    'Ahmedabad': {'state': 'Gujarat', 'lat_range': (22.9, 23.2), 'lon_range': (72.4, 72.7)},
+    'Jaipur': {'state': 'Rajasthan', 'lat_range': (26.8, 27.0), 'lon_range': (75.7, 76.0)},
+    'Lucknow': {'state': 'Uttar Pradesh', 'lat_range': (26.7, 26.9), 'lon_range': (80.9, 81.1)}
+}
+
+connectors = ['CCS2', 'Type2', 'CHAdeMO', 'GB/T', 'Type1']
+statuses = ['Operational', 'Under Maintenance', 'Planned']
+
+# ---------------- 2. Generate Random Dataset ----------------
+n = 300  # number of stations
+
+records = []
+for i in range(1, n+1):
+    city = random.choice(list(cities.keys()))
+    info = cities[city]
+    name = f"{random.choice(['Tata Power', 'ChargePoint', 'Zeon', 'Ather Grid', 'EESL', 'Fortum'])} Station {i}"
+
+    record = {
+        "Station_ID": i,
+        "Station_Name": name,
+        "City": city,
+        "State": info['state'],
+        "Country": "India",
+        "Latitude": round(random.uniform(*info['lat_range']), 5),
+        "Longitude": round(random.uniform(*info['lon_range']), 5),
+        "Power_kW": random.choice([15, 30, 45, 60, 90, 120]),
+        "Connectors": random.choice(connectors),
+        "Status": random.choice(statuses)
+    }
+    records.append(record)
+
+df = pd.DataFrame(records)
+
+# ---------------- 3. Save Dataset ----------------
+file_name = "electric_vehicle_charging_stations_2024.csv"
+df.to_csv(file_name, index=False)
+
+print(f"✅ Dataset '{file_name}' created successfully!")
+print(f"Total Stations: {len(df)}")
+df.head(10)
