@@ -1,4 +1,4 @@
-```markdown
+```
 # EV Charging Stations 2024 — Project  
 **Author:** Shubhrat Chaursiya  
 **Notebook:** [Colab Link](https://colab.research.google.com/drive/1clowTOHD2XPwD80Xpl0n3N0DkKtdJdnE?usp=sharing)  
@@ -17,7 +17,6 @@ This project uses the [Electric Vehicle Charging Stations 2024](https://www.kagg
 ## 📂 Project Structure  
 ```
 
-/Week1/
 │
 ├── EV_Charging_Stations_2024_Analysis.ipynb         # Jupyter/Colab notebook
 ├── electric_vehicle_charging_stations_2024.csv      # Raw dataset (to be downloaded separately)
