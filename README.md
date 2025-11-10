@@ -1,56 +1,75 @@
-Here’s a clean and professional `README.md` description you can directly use for your GitHub repository:
+```markdown
+# EV Charging Stations 2024 — Project  
+**Author:** Shubhrat Chaursiya  
+**Notebook:** [Colab Link](https://colab.research.google.com/drive/1clowTOHD2XPwD80Xpl0n3N0DkKtdJdnE?usp=sharing)  
 
----
+## 📝 Project Overview  
+This project uses the [Electric Vehicle Charging Stations 2024](https://www.kaggle.com/datasets/sahirmaharajj/electric-vehicle-charging-stations-2024) dataset from Kaggle to analyse and visualise EV charging infrastructure across India. The focus is on cleaning the data, performing exploratory data analysis (EDA), applying K-Means clustering for geographic segmentation, and creating interactive maps and nearest-station lookup utilities.
 
-# ⚡ ElectricVehicle_Shell-Edunet_Internship
+## 🎯 Objectives  
+- Load and clean the dataset (remove duplicates, invalid coordinates, standardise column names)  
+- Explore key features including geographic distribution (latitude & longitude), power ratings, connector types  
+- Apply **K-Means clustering** to group charging stations into meaningful geographic clusters  
+- Develop a **nearest-station finder** function using KDTree for real-time query capability  
+- Create an interactive map (via Folium) showing station locations and cluster centres  
+- Export processed data and map for further reporting or deployment  
 
-This repository showcases my work during the **Shell-Edunet Foundation Internship**, focusing on **Electric Vehicle (EV) data analytics**. The project explores charging station datasets to uncover insights on EV adoption, infrastructure, and sustainability trends.
-
----
-
-## 📊 Project Overview
-
-* **Objective:** Analyze and visualize real-world EV charging data to understand infrastructure growth and usage distribution.
-* **Dataset:** [Electric Vehicle Charging Stations 2024](https://www.kaggle.com/datasets/sahirmaharajj/electric-vehicle-charging-stations-2024?resource=download)
-* **Key Tasks:**
-
-  * Data cleaning and preprocessing
-  * Exploratory data analysis (EDA)
-  * Visualization of regional charging patterns
-  * Documentation of insights and findings
-
----
-
-## 🧠 Skills & Tools
-
-* **Languages:** Python
-* **Libraries:** Pandas, NumPy, Matplotlib, Seaborn
-* **Tools:** Jupyter Notebook, GitHub, Kaggle
-
----
-
-## 📂 Repository Structure
-
-```
-/ElectricVehicle_Shell-Edunet_Internship
-│
-├── Week1/
-│   ├── Data_Cleaning.ipynb
-│   ├── EDA_Visualizations.ipynb
-│   ├── Electric_Vehicle_Charging_Stations.csv
-│   └── README.md
-│
-└── LICENSE
+## 📂 Project Structure  
 ```
 
----
+/Week1/
+│
+├── EV_Charging_Stations_2024_Analysis.ipynb         # Jupyter/Colab notebook
+├── electric_vehicle_charging_stations_2024.csv      # Raw dataset (to be downloaded separately)
+├── EV_Charging_Stations_with_Clusters.csv           # Processed dataset after clustering
+├── EV_Charging_Stations_Map.html                    # Interactive map output
+└── README.md                                         # Project documentation
 
-## 🚀 Highlights
+````
 
-* Explored EV data to identify charging trends across regions
-* Built visualizations for key station parameters
-* Improved data quality through preprocessing
-* Created a foundation for predictive or dashboard-based expansion
+## 🛠️ How to Run  
+1. **Download the dataset** from Kaggle:  
+   https://www.kaggle.com/datasets/sahirmaharajj/electric-vehicle-charging-stations-2024  
+2. Place `electric_vehicle_charging_stations_2024.csv` in the `Week1/` folder.  
+3. Open the notebook (`EV_Charging_Stations_2024_Analysis.ipynb`) in Google Colab or Jupyter Notebook.  
+4. Install required libraries if not already available:
+   ```bash
+   pip install pandas numpy matplotlib seaborn scikit-learn folium
+````
+
+5. Run all cells in order.
+6. After execution you will get:
+
+   * A cleaned & clustered dataset: `EV_Charging_Stations_with_Clusters.csv`
+   * An interactive map: `EV_Charging_Stations_Map.html`
+   * Console outputs with summary metrics and visualisation charts.
+
+## 📊 Key Features & Visualisations
+
+* Histogram plots of latitude, longitude distributions
+* Scatter plot of station locations colour-coded by cluster
+* Interactive map showing station markers and cluster centres
+* Nearest station search function: `find_nearest_station(lat, lon, k)` for on-the-fly query
+
+## 🔍 Improvements Made
+
+* Standardised column naming and cleaned invalid coordinate entries
+* Removed duplicates and filtered out extreme coordinate outliers
+* Applied K-Means clustering to identify geographic segments for better planning
+* Built a nearest-station lookup utility with `KDTree` for fast geographic queries
+* Visualised results via Folium map and exported processed data for further analysis
+
+## 📚 Future Enhancements
+
+* Introduce additional features such as charger pricing (₹/kWh), station usage stats (kWh/day)
+* Integrate advanced ML models to predict demand or optimal station placement
+* Build a web/desktop UI (e.g., Streamlit app) for user-interactive queries and visualisations
+* Include temporal data (if available) to analyse growth trends in charging infrastructure
+
+## 📄 License & Acknowledgements
+
+Dataset provided by Kaggle user Sahir Maharaj. Please refer to the original dataset page for usage conditions.
+This project is for educational purposes and part of the Shell-Edunet internship.
 
 ---
 
