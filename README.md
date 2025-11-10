@@ -1,56 +1,91 @@
-Here’s a clean and professional `README.md` description you can directly use for your GitHub repository:
-
----
-
-# ⚡ ElectricVehicle_Shell-Edunet_Internship
-
-This repository showcases my work during the **Shell-Edunet Foundation Internship**, focusing on **Electric Vehicle (EV) data analytics**. The project explores charging station datasets to uncover insights on EV adoption, infrastructure, and sustainability trends.
-
----
-
-## 📊 Project Overview
-
-* **Objective:** Analyze and visualize real-world EV charging data to understand infrastructure growth and usage distribution.
-* **Dataset:** [Electric Vehicle Charging Stations 2024](https://www.kaggle.com/datasets/sahirmaharajj/electric-vehicle-charging-stations-2024?resource=download)
-* **Key Tasks:**
-
-  * Data cleaning and preprocessing
-  * Exploratory data analysis (EDA)
-  * Visualization of regional charging patterns
-  * Documentation of insights and findings
-
----
-
-## 🧠 Skills & Tools
-
-* **Languages:** Python
-* **Libraries:** Pandas, NumPy, Matplotlib, Seaborn
-* **Tools:** Jupyter Notebook, GitHub, Kaggle
-
----
-
-## 📂 Repository Structure
-
 ```
-/ElectricVehicle_Shell-Edunet_Internship
-│
-├── Week1/
-│   ├── Data_Cleaning.ipynb
-│   ├── EDA_Visualizations.ipynb
-│   ├── Electric_Vehicle_Charging_Stations.csv
-│   └── README.md
-│
-└── LICENSE
+# Week 2 – EV Charging Stations Project  
+**Author:** Shubhrat Chaursiya  
+**Project:** Electric Vehicle Charging Stations – Shell-Edunet Internship  
+**Week:** 2 — Model Selection & Building  
+**Prerequisite (Week 1):** Data cleaning, EDA & clustering of EV charging station dataset
+
+---
+
+## 🎯 Objectives for Week 2  
+- Research and select appropriate machine learning models for the charging-station dataset.  
+- Implement a baseline regression model (for example: predicting station power or usage) and evaluate its performance.  
+- Train additional models (e.g., Random Forest, Gradient Boosting) and perform feature engineering to enhance performance.  
+- Apply cross-validation for reliable model evaluation and compare results.
+
+---
+
+## 📂 Project Structure  
 ```
 
+/Week2/
+│
+├── Week2_Model_Selection.ipynb      # Jupyter notebook with modelling workflow
+├── datasets/                        # (Optional) folder for raw/processed datasets
+│   └── EV_Charging_Stations_with_Clusters.csv
+├── models/                          # (Optional) folder to store trained model files
+│   └── best_model.pkl
+├── README.md                        # This documentation file
+└── outputs/                         # (Optional) folder for outputs, charts etc.
+└── feature_importance.png
+
+````
+
 ---
 
-## 🚀 Highlights
+## 🛠️ How to Run  
+1. Ensure you have the cleaned dataset from **Week 1** (`EV_Charging_Stations_with_Clusters.csv`).  
+2. Install required libraries if not already followed:  
+   ```bash
+   pip install pandas numpy matplotlib seaborn scikit-learn joblib
+````
 
-* Explored EV data to identify charging trends across regions
-* Built visualizations for key station parameters
-* Improved data quality through preprocessing
-* Created a foundation for predictive or dashboard-based expansion
+3. Open the notebook: `Week2_Model_Selection.ipynb` in Jupyter or Colab.
+4. Run through the notebook and examine:
+
+   * Baseline model training & evaluation
+   * Feature engineering steps
+   * Model comparisons and selection
+   * Final chosen model saved to `models/best_model.pkl`
+5. Review outputs in the `outputs/` folder (charts, logs, etc.).
+
+---
+
+## 📌 Key Highlights
+
+* Baseline model established (e.g., Linear Regression) to set performance benchmark.
+* Feature engineering applied (e.g., encoding connector types, power bins, geographic clusters).
+* Advanced models trained and compared (e.g., Random Forest, Gradient Boosting).
+* Cross-validation used for robust evaluation of metrics such as RMSE, MAE, R².
+* Final model serialized for potential deployment in Week 3/4.
+
+---
+
+## 🔍 Improvements Introduced in Week 2
+
+* Introduced supervised machine learning predictive modelling (regression) instead of just clustering.
+* Enhanced feature set with engineered variables (example: cluster_id, power_kW bin, connector count).
+* Performed hyper-parameter tuning and model comparison to identify best-fit algorithm.
+* Adopted cross-validation to reduce over-fitting and assess model generalisation.
+* Stored final model and created visual artefacts (feature importance plot) for interpretability.
+
+---
+
+## 🚀 Next Steps (Week 3 Preview)
+
+* Model evaluation and optimisation: apply more advanced techniques (ensembles, boosting).
+* Perform error analysis, diagnose under-/over-fitting issues.
+* Interpret model output: feature importance, partial dependence, SHAP values etc.
+* Prepare final deliverables: dashboard/PPT/report and code for deployment or demonstration.
+
+---
+
+## 📄 Licence & Acknowledgements
+
+Dataset (EV Charging Stations 2024) sourced from Kaggle.
+Project performed under the Shell-Edunet Skills4Future Internship.
+Feel free to explore and extend the work further.
+
 
 ---
 
